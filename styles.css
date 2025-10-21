@@ -1,0 +1,257 @@
+/* ---------- Base ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(180deg, #fff8f8 0%, #ffffff 100%);
+  color: #222;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* ---------- Navigation ---------- */
+header {
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  padding: 1.2rem 1rem;
+}
+
+nav a {
+  color: #111;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #c21807;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after,
+nav a.active::after {
+  width: 100%;
+}
+
+nav a:hover {
+  color: #c21807;
+}
+
+/* ---------- Home ---------- */
+.home {
+  text-align: center;
+  padding: 5rem 1rem 3rem;
+  animation: fadeIn 1s ease-in;
+}
+
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+  border: 4px solid #c21807;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #111;
+}
+
+.status {
+  color: #c21807;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #c21807, #ff5c8d);
+  color: white;
+  padding: 0.75rem 1.6rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 14px rgba(255, 92, 141, 0.3);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 92, 141, 0.4);
+}
+
+.description {
+  max-width: 500px;
+  margin: 1rem auto;
+  color: #444;
+}
+
+/* ---------- Projects ---------- */
+.projects {
+  padding: 1rem 1rem;
+  text-align: center;
+}
+
+.projects h1 {
+  font-size: 2rem;
+  color: #111;
+  margin-bottom: 2rem;
+}
+
+.projects .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+  backdrop-filter: blur(8px);
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-card h3 {
+  margin: 1rem 0 0.5rem;
+  color: #c21807;
+}
+
+.project-card p {
+  padding: 0 1rem;
+  color: #444;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+/* ---------- About ---------- */
+.about, .contact {
+  padding: 4rem 1rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.about h1, .contact h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #111;
+}
+
+.about h2 {
+  margin-top: 2rem;
+  color: #c21807;
+}
+
+.about ul {
+  margin-top: 0.5rem;
+  list-style: none;
+}
+
+.about ul li {
+  background: rgba(255, 92, 141, 0.1);
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  margin: 0.5rem 0;
+}
+
+/* ---------- Contact ---------- */
+.contact p, .contact a {
+  text-align: center;
+  color: #444;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.contact a {
+  color: #c21807;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact a:hover {
+  color: #ff5c8d;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  background: brown;
+  color: #fff;
+  margin-top: 3rem;
+  border-top: 4px solid #c21807;
+}
+
+footer .socials img {
+  width: 26px;
+  margin: 0 8px;
+  filter: invert(1);
+  transition: transform 0.25s;
+}
+
+footer .socials img:hover {
+  transform: scale(1.2);
+}
+
+/* ---------- Animations ---------- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    gap: 1.2rem;
+  }
+  .profile-pic {
+    width: 140px;
+    height: 140px;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+}
