@@ -227,7 +227,6 @@ footer {
 footer .socials img {
   width: 26px;
   margin: 0 8px;
-  filter: invert(1);
   transition: transform 0.25s;
 }
 
