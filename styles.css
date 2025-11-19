@@ -128,20 +128,6 @@ h1 {
   cursor: default;
 }
 
-.myName::after {
-  content: '';
-  display: block;
-  width: 50%;
-  height: 2px;
-  margin: 0.5rem auto 0;
-  background: #c21807;
-  border-radius: 1px;
-  transition: width 0.3s ease;
-}
-.myName:hover::after {
-  width: 80%;
-}
-
 
 .status {
   color: var(--primary-color);
@@ -265,7 +251,7 @@ h1 {
 
 /* ---------- About ---------- */
 .about, .contact {
-  padding: 4rem 1rem;
+  padding: 1rem;
   max-width: 800px;
   margin: auto;
 }
@@ -330,6 +316,96 @@ footer .socials img {
 
 footer .socials img:hover {
   transform: scale(1.2);
+}
+
+.contact {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 3rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contact h1 {
+  color: #000;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2.2rem;
+  border-bottom: 3px solid #ff5c8d;
+  padding-bottom: 0.5rem;
+}
+
+.contact p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.contact a {
+  color: #c21807;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.contact a:hover {
+  color: white;
+  background-color: #c21807;
+  text-decoration: none;
+}
+
+section {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+section h2 {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #333;
+  text-align: center;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+section li {
+  margin: 0.75rem 0;
+}
+
+section a {
+  display: block;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  background: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+section a:hover {
+  background: #ff5c8d;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
 
