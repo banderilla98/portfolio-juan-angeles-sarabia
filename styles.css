@@ -104,6 +104,45 @@ h1 {
   color: #111;
 }
 
+.myName {
+    font-family: 'Inter', 'Poppins', sans-serif; /* Modern Google Fonts */
+  font-weight: 700;                             /* Bold and confident */
+  font-size: 3rem;                              /* Big enough to be a header */
+  text-align: center;
+  line-height: 1.2;
+  
+  /* Subtle gradient effect for style */
+  background: linear-gradient(95deg, #c21807, #000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Cute touches */
+  letter-spacing: 0.5px;                        /* Slightly airy */
+  margin: 1.5rem auto;                          /* Centered with space */
+  text-shadow: 0 4px 6px rgba(0,0,0,0.1);       /* Soft shadow for depth */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.myName:hover {
+  transform: scale(1.05) rotate(-1deg);        /* Slight tilt and pop */
+  cursor: default;
+}
+
+.myName::after {
+  content: '';
+  display: block;
+  width: 50%;
+  height: 2px;
+  margin: 0.5rem auto 0;
+  background: #c21807;
+  border-radius: 1px;
+  transition: width 0.3s ease;
+}
+.myName:hover::after {
+  width: 80%;
+}
+
+
 .status {
   color: var(--primary-color);
   font-weight: 600;
@@ -129,11 +168,43 @@ h1 {
   box-shadow: 0 6px 20px rgba(255, 92, 141, 0.4);
 }
 
+/* ------------ Description index ----------*/
+
 .description {
-  max-width: 500px;
-  margin: 1rem auto;
-  color: var(--subtext-color);
+  max-width: 500px;                     /* Keeps text readable */
+  margin: 2rem auto;                     /* Centered with more spacing */
+  font-family: 'Inter', sans-serif;     /* Google Font */
+  font-weight: 500;                      /* Medium weight for clarity */
+  font-size: 1.125rem;                   /* Slightly bigger than normal */
+  line-height: 1.7;                      /* Perfect for readability */
+  letter-spacing: 0.5px;                 /* Subtle spacing */
+  text-align: center;                    /* Centered for landing pages */
+  
+  background: linear-gradient(90deg, #000, #ff5c8d);  /* Gradient text */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;  /* Makes gradient visible */
+  
+  opacity: 0.95;                         /* Slightly softens text */
+  transition: all 0.3s ease;             /* Smooth hover effects */
+  word-wrap: break-word;                  /* Prevent overflow on small screens */
 }
+
+/* Optional: subtle hover effect */
+.description:hover {
+  transform: translateY(-2px);
+  text-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  cursor: default;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .description {
+    font-size: 1rem;
+    max-width: 90%;
+    line-height: 1.6;
+  }
+}
+
 
 /* ---------- Projects ---------- */
 .projects {
@@ -260,6 +331,10 @@ footer .socials img {
 footer .socials img:hover {
   transform: scale(1.2);
 }
+
+
+
+
 
 /* ---------- Animations ---------- */
 @keyframes fadeIn {
