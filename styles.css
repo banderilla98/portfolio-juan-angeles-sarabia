@@ -255,11 +255,11 @@ h1 {
 .about {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 3.5rem 1.5rem;
+  padding: 0.2rem 1.5rem;
   /* Use Grid for a modern layout */
   display: grid;
   grid-template-columns: 1fr 350px; /* Main content + Sidebar */
-  gap: 2rem;
+  
   animation: fadeIn 0.8s ease;
 }
 
