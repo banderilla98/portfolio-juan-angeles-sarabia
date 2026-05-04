@@ -337,25 +337,62 @@ h1 {
 }
 
 
-/* ---------- Contact ---------- */
-.contact p, .contact a {
+/* =========================
+   CONTACT FORM CLEAN STYLE
+   ========================= */
+
+.contact-page form {
+  margin-top: 1.5rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-row input {
+  flex: 1;
+}
+
+/* Inputs + textarea */
+input,
+textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Focus state (important UX improvement) */
+input:focus,
+textarea:focus {
+  outline: none;
+  border: 1px solid #c21807;
+  box-shadow: 0 0 0 2px rgba(194, 24, 7, 0.1);
+}
+
+/* Textarea spacing */
+textarea {
+  margin-bottom: 1rem;
+  resize: vertical;
+}
+
+/* Button full width */
+.contact-page .btn {
+  width: 100%;
   text-align: center;
-  color: var(--subtext-color);
-  display: block;
-  margin-bottom: 0.5rem;
 }
 
-.contact a {
-  color: var(--primary-color);
-  text-decoration: none;
-  transition: color 0.3s, transform 0.2s;
+/* Mobile fix */
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+  }
 }
-
-.contact a:hover {
-  color: var(--secondary-color);
-  transform: scale(1.05);
-}
-
 /* ---------- Footer ---------- */
 footer {
   text-align: center;
@@ -466,6 +503,79 @@ section a:hover {
   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
+
+/* =========================
+   PREMIUM POPUP
+   ========================= */
+
+.popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  z-index: 9999;
+}
+
+.popup.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.popup-box {
+  background: white;
+  padding: 1.2rem 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 260px;
+  animation: slideIn 0.3s ease;
+}
+
+/* ICON */
+.popup-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+}
+
+/* SUCCESS */
+.popup-icon.success {
+  background: #28a745;
+}
+
+/* ERROR */
+.popup-icon.error {
+  background: #dc3545;
+}
+
+/* TEXT */
+#popup-message {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* ANIMATION */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 
 
